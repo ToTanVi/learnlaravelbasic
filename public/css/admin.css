@@ -1,0 +1,14 @@
+.admin-page .admin-bar {
+  background: #F8F9FA;
+  height: 100vh;
+}
+
+.admin-page .admin-bar a {
+  color: #222222;
+  padding-left: 0;
+}
+
+.admin-page .admin-bar a i {
+  margin-right: 15px;
+}
+

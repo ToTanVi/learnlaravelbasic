@@ -1,0 +1,700 @@
+$main-color: #76ee00
+@import url('https://fonts.googleapis.com/css?family=Lobster|Roboto+Condensed|Varela+Round')
+body
+	font-family: ''Roboto Condensed', sans-serif', sans-serif
+	letter-spacing: 1px
+	font-size: 1rem
+a
+	&:hover
+		text-decoration: none
+header.header-common
+	min-height: 77px
+	.top-header
+		display: none
+	.main-header
+		background: lighten(#181818,8%)
+		box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2)
+		nav
+			width: 100%
+			.menu
+				margin-top: 20px
+				ul
+					li
+						padding: 0 10px
+						position: relative
+						a
+							font-size: 0.9rem
+							color: #fff
+							text-transform: uppercase
+							font-weight: bold
+						&:after
+							content: ""
+							position: absolute
+							bottom: 0
+							left: 0
+							width: 0
+							height: 2px
+							background-color: #ff3
+							transition: all 0.3s
+						&:hover:after
+							width: 100%
+						&:hover .menu-sub
+							display: block
+						.menu-sub
+							display: none
+							position: relative
+							left: 0
+							background: lighten(#181818,15%)
+							ul
+								padding: 0
+								li
+									padding: 5px 15px
+									list-style-type: none
+									width: 185px
+									a
+										color: #fff
+										&:hover
+											text-decoration: none
+						.info
+							display: none
+							position: absolute
+							z-index: 251
+							left: 0
+							top: 150%
+							li
+								a
+									color: #222
+							&:before
+								content: ''
+								position: absolute
+								width: 0
+								height: 0
+								top: -9px
+								left: 45%
+								border-left: 10px solid transparent
+								border-right: 11px solid transparent
+								border-bottom: 10px solid #fff
+				.form-inline
+					.form-control
+						border: 1px solid $main-color
+						width: 70%
+						margin-right: 10px
+					.btn-outline-success
+						color: #fff
+			.navbar-toggler
+				.fa-bars
+					font-size: 2rem
+					color: #fff
+	.login-form
+		display: none
+		position: relative
+		top: 150%
+		left: 50%
+		transform: translate(-50%)
+		background: #fff
+		z-index: 250
+		width: 100%
+		padding: 15px
+		&:before
+			content: ''
+			position: absolute
+			width: 0
+			height: 0
+			top: -9px
+			left: 40px
+			border-left: 10px solid transparent
+			border-right: 11px solid transparent
+			border-bottom: 10px solid #fff
+		h3
+			font-family: 'Lobster', cursive
+		.btn-login
+			background: $main-color
+			color: #fff
+// Home
+main.home
+	.slideshow
+		position: relative
+		.item
+			img
+				width: 100%
+				height: 40vh
+		.owl-nav
+			position: absolute
+			top: 40%
+			width: 100%
+			.owl-next
+				right: 0
+				padding: 2px 0px 0 5px
+			.owl-prev
+				left: 0
+				padding: 2px 3px 0px 0px
+			[class*=owl-]
+				background: rgba(0,0,0,.5)
+				position: absolute
+				font-size: 1.5rem
+				width: 40px
+				height: 40px
+				-moz-border-radius: 50px
+				-webkit-border-radius: 50px
+	.bamien,
+	.douong
+		h2
+			padding: 10px
+			font-family: 'Lobster', cursive
+			font-weight: bold
+			a
+				color: #2c2c2c
+				&:hover
+					text-decoration: none
+		.slideshow-btn
+			position: relative
+			.item
+				padding: 10px
+				img
+					width: 100%
+					height: 30vh
+					transition: 0.3s all
+					&:hover
+						-ms-transform: scale(1.15,1.15)
+						-webkit-transform: scale(1.15,1.15)
+						transform: scale(1.15,1.15)
+				.caption
+					h5
+						font-weight: bold
+					.btn-mv
+						border: 1px solid #2c2c2c
+						background: none
+						transition: 0.3s all
+						&:hover
+								background: #2c2c2c
+						a
+							color: $main-color
+							&:hover
+								text-decoration: none
+								color: yellow
+			.owl-nav
+				position: absolute
+				top: 40%
+				width: 100%
+				.owl-next
+					right: 0
+					padding: 8px 0px 0 5px
+				.owl-prev
+					left: 0
+					padding: 8px 3px 0px 0px
+				[class*=owl-]
+					background: none
+					position: absolute
+					font-size: 1.2rem
+					width: 40px
+					height: 40px
+					-moz-border-radius: 50px
+					-webkit-border-radius: 50px
+					color: #000
+	.block-mid
+		background: #f6f6f6
+		.row
+			.bg-monviet
+				background: url('http://localhost:3000/laravel/public/images/food2.jpg')
+				background-size: cover
+				position: relative
+				min-height: 296px
+				h3
+					display: none
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%)
+					font-family: 'Lobster', cursive
+					font-size: 4rem
+					color: $main-color
+			[class*=col-]
+					padding: 0
+			.mid-content
+				box-sizing: border-box
+				padding: 25px 25px 0 25px
+				font-size: 0.93rem
+				text-align: center
+				h3
+					font-family: 'Lobster', cursive
+					color: $main-color
+					font-size: 2.5rem
+				p
+					text-align: justify
+// Home
+// Category
+main.category
+	.slideshow
+		position: relative
+		.item
+			img
+				height: 40vh
+		.owl-nav
+			position: absolute
+			top: 40%
+			width: 100%
+			.owl-next
+				right: 0
+				padding: 2px 0px 0 5px
+			.owl-prev
+				left: 0
+				padding: 2px 3px 0px 0px
+			[class*=owl-]
+				background: rgba(0,0,0,.5)
+				position: absolute
+				font-size: 1.5rem
+				width: 40px
+				height: 40px
+				-moz-border-radius: 50px
+				-webkit-border-radius: 50px
+	.category
+		h3
+			background: #2c2c2c
+			border-left: 7px solid yellow
+			padding: 5px 10px
+			text-transform: uppercase
+			font-family: 'Varela Round', sans-serif;
+			font-size: 1.1rem
+			a
+				color: #ffffff
+		ul
+			list-style-type: none
+			padding: 0
+			li
+				position: relative
+				border-bottom: 1.1px dashed #c9c9c9
+				padding: 8px
+				&:hover
+					border: none
+				&:after
+					content: ''
+					position: absolute
+					width: 0
+					height: 2px
+					bottom: 0
+					left: 0
+					background: yellow
+					transition: all 0.3s
+				&:hover:after
+							width: 100%
+				a
+					padding-left: 20px
+					color: #000
+	.food-title
+		h2
+			font-family: 'Lobster', cursive
+			font-size: 2rem
+			font-weight: bold
+	.category-title
+		h3
+			font-family: 'Lobster', cursive
+			font-size: 1.8rem
+			font-weight: bold
+			background: darken(#f9f9f9,2%)
+			padding: 5px 0 0 15px
+			border-left: 7px solid yellow
+		p
+			padding-top: 10px
+			font-size: 0.9rem
+			font-family: ''Roboto Condensed', sans-serif'
+			a
+				color: #2c2c2c
+				text-decoration: underline
+	.food-list
+		transition: all 0.3s
+		&:hover
+			box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)
+			z-index: 250
+		h5
+			font-weight: bold
+			margin-bottom: 0
+		.img-fluid
+			height: 30vh
+		.btn-mv
+			border: 1px solid #2c2c2c
+			background: none
+			transition: 0.3s all
+			&:hover
+					background: #2c2c2c
+			a
+				color: $main-color
+				&:hover
+					text-decoration: none
+					color: yellow
+// Category
+// Food detail
+main.food-detail
+	.slideshow
+		position: relative
+		.item
+			img
+				height: 40vh
+		.owl-nav
+			position: absolute
+			top: 40%
+			width: 100%
+			.owl-next
+				right: 0
+				padding: 2px 0px 0 5px
+			.owl-prev
+				left: 0
+				padding: 2px 3px 0px 0px
+			[class*=owl-]
+				background: rgba(0,0,0,.5)
+				position: absolute
+				font-size: 1.5rem
+				width: 40px
+				height: 40px
+				-moz-border-radius: 50px
+				-webkit-border-radius: 50px
+	.category
+		h3
+			background: #2c2c2c
+			border-left: 7px solid yellow
+			padding: 5px 10px
+			text-transform: uppercase
+			font-family: 'Varela Round', sans-serif;
+			font-size: 1.1rem
+			a
+				color: #ffffff
+		ul
+			list-style-type: none
+			padding: 0
+			li
+				position: relative
+				border-bottom: 1.1px dashed #c9c9c9
+				padding: 8px
+				&:hover
+					border: none
+				&:after
+					content: ''
+					position: absolute
+					width: 0
+					height: 2px
+					bottom: 0
+					left: 0
+					background: yellow
+					transition: all 0.3s
+				&:hover:after
+							width: 100%
+				a
+					padding-left: 20px
+					color: #000
+	.food-img
+		img
+			height: 40vh
+	.food-main
+		h3
+			font-weight: bold
+		.food-btn
+			border: 1px solid #2c2c2c
+			background: none
+			transition: 0.3s all
+			color: $main-color
+			&:hover
+					background: #2c2c2c
+					color: yellow
+	.splq
+		.slideshow-btn
+			position: relative
+			.item
+				padding: 10px
+				img
+					width: 100%
+					height: 20vh
+					transition: 0.3s all
+					&:hover
+						-ms-transform: scale(1.15,1.15)
+						-webkit-transform: scale(1.15,1.15)
+						transform: scale(1.15,1.15)
+				.caption
+					h5
+						font-weight: bold
+					.btn-mv
+						border: 1px solid #2c2c2c
+						background: none
+						transition: 0.3s all
+						&:hover
+								background: #2c2c2c
+						a
+							color: $main-color
+							&:hover
+								text-decoration: none
+								color: yellow
+			.owl-nav
+				position: absolute
+				top: 30%
+				width: 100%
+				.owl-next
+					right: 0
+					padding: 8px 0px 0 5px
+				.owl-prev
+					left: 0
+					padding: 8px 3px 0px 0px
+				[class*=owl-]
+					background: none
+					position: absolute
+					font-size: 1.2rem
+					width: 40px
+					height: 40px
+					-moz-border-radius: 50px
+					-webkit-border-radius: 50px
+					color: #000
+// Member
+main.member
+	.avatar
+		p
+			color: $main-color
+			font-size: 1.5rem
+	.list-group
+		.list-group-item
+			a
+				color: $main-color
+		.active
+			background: $main-color
+			border-color: $main-color
+			a
+				color: #fff
+	.content-info
+		h4
+			font-weight: bold
+		.btn-change
+			background: $main-color
+			color: #fff
+
+// Member
+// Login & Register
+main.login
+	.title-login
+		font-family: 'Lobster', cursive
+		font-size: 2rem
+main.register
+	.title-register
+		font-family: 'Lobster', cursive
+		font-size: 2rem
+// Login & Register
+// Food detail
+footer.footer-common
+	background: #21201e
+	font-size: 0.8rem
+	color: #fff
+	text-align: center
+	padding-top: 20px
+	h3
+		padding-bottom: 10px
+		border-bottom: 1px solid yellow
+		font-family: ''Varela Round', sans-serif;', sans-serif
+		font-size: 1.5rem
+	p
+		cursor: pointer
+	.footer-logo
+		p
+			text-align: justify
+			padding-top: 10px
+	.contact,
+	.policy
+		p
+			&:nth-child(2)
+				padding-top: 10px
+			span
+				padding-right: 10px
+	.navbar-bottom
+		background: $main-color
+@media (min-width: 768px)
+	header.header-common
+		min-height: 117px
+		.top-header
+			display: block
+			background: $main-color
+			.th-content
+				a
+					padding: 0px 10px
+					color: #fff
+					font-size: 0.8rem
+					text-transform: uppercase
+					&:hover
+						text-decoration: none
+						color: yellow
+					span
+						padding-right: 5px
+						font-size: 1rem
+			.info
+				display: none
+				position: absolute
+				z-index: 251
+				right: 0
+				top: 150%
+				li
+					a
+						color: #222
+				&:before
+					content: ''
+					position: absolute
+					width: 0
+					height: 0
+					top: -9px
+					left: 45%
+					border-left: 10px solid transparent
+					border-right: 11px solid transparent
+					border-bottom: 10px solid #fff
+		.main-header
+			nav
+				.menu
+					position: relative
+					ul
+						.join
+							display: none
+						li
+							.menu-sub
+								position: absolute
+					.form-inline
+						.form-control
+							width: auto
+							margin: 0
+						.btn-outline-success
+							color: $main-color
+		.login-form
+			position: absolute
+			top: 150%
+			left: 50%
+			&:before
+				left: -10px
+				left: 83%
+	main.home
+		.slideshow
+			position: relative
+			.item
+				img
+					width: 100%
+					height: 60vh
+		.bamien
+			h2
+				padding: 10px
+				a
+					color: #2c2c2c
+					&:hover
+						text-decoration: none
+			.slideshow-btn
+				.owl-nav
+					.owl-next
+						right: -40px
+					.owl-prev
+						left: -40px
+		.block-mid
+			.triangle-1
+				position: relative
+				&:before
+					content: ''
+					position: absolute
+					width: 0
+					height: 0
+					left: -20px
+					top: 50%
+					transform: translateY(-50%)
+					border-top: 15px solid transparent
+					border-right: 20px solid #f6f6f6
+					border-bottom: 15px solid transparent
+			.triangle-2
+				position: relative
+				&:before
+					content: ''
+					position: absolute
+					width: 0
+					height: 0
+					right: -20px
+					top: 50%
+					transform: translateY(-50%)
+					border-top: 15px solid transparent
+					border-left: 20px solid #f6f6f6
+					border-bottom: 15px solid transparent
+					z-index: 200
+	main.category
+		.slideshow
+			.item
+				img
+					height: 60vh
+	main.food-detail
+		.slideshow
+			.item
+				img
+					height: 60vh
+		.splq
+			.slideshow-btn
+				.owl-nav
+					.owl-next
+						right: -40px
+					.owl-prev
+						left: -40px
+	footer
+		text-align: left
+@media (min-width: 992px)
+	header.header-common
+		.main-header
+			nav
+				.menu
+					margin-top: 0
+					.form-inline
+						position: relative
+						top: initial
+						left: initial
+						.btn-outline-success
+							color: #fff
+	main.home
+		.slideshow
+			position: relative
+			.item
+				img
+					width: 100%
+					height: 100vh
+	main.category
+		.slideshow
+			.item
+				img
+					height: 100vh
+	main.food-detail
+		.slideshow
+			.item
+				img
+					height: 100vh
+@media (min-width: 1200px)
+	header.header-common
+		.main-header
+			nav
+				.menu
+					ul
+						li
+							padding: 0 25px
+
+// Admin style
+header.header-admin
+	min-height: 56px
+main.admin
+	.side-bar
+		ul
+			.active
+				background: #04AA59
+				a
+					color: #fff
+			li
+				a
+					color: #212529
+	.content-admin
+		.row
+			.bg-block-1
+				background: #ff5043
+			.bg-block-2
+				background: #3fa243
+			.bg-block-3
+				background: #1489e6
+			.bg-block-4
+				background: #f24a15
+			[class*=bg-block-]
+				color: #fff
+				padding-bottom: 30px
+				p
+					padding-top: 15px
+				.number
+					font-size: 3rem
+				&:hover
+					box-shadow: 0 5px 4px 0 rgba(0,0,0,0.16),0 5px 10px 0 rgba(0,0,0,0.12)
+// Admin style
